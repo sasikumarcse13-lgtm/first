@@ -1,0 +1,12 @@
+CollegeShine Blog DB check
+
+1. Put the Hostinger MySQL values in CollegeShine/server/.env (do not commit or share this file).
+2. Start: cd server && npm start
+3. The terminal will print: [CollegeShine DB] Connected. blogs=X, published=Y
+4. Open http://localhost:5000/api/health. It will show blogCount and publishedBlogCount.
+5. The blog listing intentionally shows only rows whose status is published.
+
+SQL check:
+SELECT id, title, slug, status, published_date FROM blogs ORDER BY id DESC;
+
+If you have 4 rows but publishedBlogCount is 3, the fourth row is not marked published. Set the intended article to published in your database.

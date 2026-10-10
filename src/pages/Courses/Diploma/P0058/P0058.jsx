@@ -1,0 +1,17 @@
+import { useEffect } from 'react'
+import Navbar from '../../../../components/Navbar/Navbar'
+import Footer from '../../../../components/Footer/Footer'
+import './P0058.css'
+import SEO from '../../../../components/SEO/SEO.jsx'
+export default function DiplomaInFilmAndTelevisionTechnology(){
+return <><SEO
+  title="Diploma in Film &amp; Television Technology | Course Details, Eligibility &amp; Colleges"
+  description="Explore Diploma in Film &amp; Television Technology course details, eligibility, duration, admissions and related colleges on CollegeShine."
+  canonical="/course/diploma/diploma-in-film-and-television-technology/"
+  noindex={true}
+  pageType="course"
+  searchIntent="informational"
+  keywords={['Diploma in Film & Television Technology', 'Diploma in Film & Television Technology course', 'Diploma in Film & Television Technology eligibility', 'Diploma in Film & Television Technology colleges']}
+  breadcrumbs={[{"name": "Home", "url": "/"}, {"name": "Diploma Courses", "url": "/course/diploma/"}, {"name": "Diploma in Film & Television Technology", "url": "/course/diploma/diploma-in-film-and-television-technology/"}]}
+/>
+      <Navbar/><main className="course-detail-page"></main><Footer/></>}

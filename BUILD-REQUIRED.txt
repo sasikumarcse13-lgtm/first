@@ -1,0 +1,13 @@
+IMPORTANT: This source package contains the Lighthouse fixes. The old dist/ directory was intentionally removed so an old JavaScript bundle cannot overwrite these fixes.
+
+Build before running production:
+  npm install
+  npm run build
+  npm run server
+
+For development:
+  npm install
+  npm run dev
+
+
+VISIBILITY FIX: Course Categories are rendered directly by React instead of waiting for the deferred HomeScripts bundle. Smart Tools cards are visible immediately and no longer depend on the Admission section being reached.

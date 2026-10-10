@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#033990" />
+    <meta name="color-scheme" content="light" />
+    <meta name="author" content="CollegeShine" />
+    <link rel="icon" href="/assets/collegeshine-logo.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/og-default.png" />
+    <script>
+      // Accessibility safety net for legacy/dynamic widgets: only add an alt
+      // when an image has no alt attribute at all. Existing decorative alt=""
+      // values remain untouched.
+      (() => {
+        const labelImage = (img) => {
+          if (!img.hasAttribute('alt')) {
+            const src = img.getAttribute('src') || '';
+            const name = src.split('/').pop().split('?')[0].replace(/[-_]+/g, ' ').replace(/\.(webp|png|jpe?g|avif|svg)$/i, '').trim();
+            img.setAttribute('alt', name ? name.replace(/\bcollegeshine\b/gi, 'CollegeShine') : 'CollegeShine image');
+          }
+          const size = () => {
+            if (!img.hasAttribute('width') && img.naturalWidth) img.setAttribute('width', String(img.naturalWidth));
+            if (!img.hasAttribute('height') && img.naturalHeight) img.setAttribute('height', String(img.naturalHeight));
+          };
+          if (img.complete) size(); else img.addEventListener('load', size, { once: true, passive: true });
+        };
+        const scan = (root) => {
+          if (root && root.matches && root.matches('img')) labelImage(root);
+          if (root && root.querySelectorAll) root.querySelectorAll('img').forEach(labelImage);
+        };
+        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => scan(document), { once: true });
+        else scan(document);
+        new MutationObserver((mutations) => mutations.forEach(m => m.addedNodes.forEach(scan))).observe(document.documentElement, { childList: true, subtree: true });
+      })();
+    </script>
+    <link rel="preload" as="image" href="https://collegeshine.com/wp-content/uploads/2026/08/hero-banner-image-collegeshine.webp" fetchpriority="high" />
+    <meta name="description" content="Find colleges, courses, admissions, entrance exams, scholarships and career guidance with CollegeShine. Explore options and plan your education journey." />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <link rel="canonical" href="https://collegeshine.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="CollegeShine | Colleges, Courses, Admissions &amp; Scholarships" />
+    <meta property="og:description" content="Find colleges, courses, admissions, entrance exams, scholarships and career guidance with CollegeShine. Explore options and plan your education journey." />
+    <meta property="og:url" content="https://collegeshine.com/" />
+    <meta property="og:site_name" content="CollegeShine" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:image" content="https://collegeshine.com/og-default.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CollegeShine | Colleges, Courses, Admissions &amp; Scholarships" />
+    <meta name="twitter:description" content="Find colleges, courses, admissions, entrance exams, scholarships and career guidance with CollegeShine. Explore options and plan your education journey." />
+    <meta name="twitter:image" content="https://collegeshine.com/og-default.png" />
+    <title>CollegeShine | Colleges, Courses, Admissions &amp; Scholarships</title>
+  </head>
+  <body>
+    <a id="cs-skip-link" href="#main-content">Skip to main content</a>
+    <div id="cs-preloader" role="status" aria-live="polite" aria-label="Loading CollegeShine">
+      <img src="/assets/collegeshine-preloader.gif" width="480" height="270" alt="CollegeShine loading" fetchpriority="high" decoding="async" />
+    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

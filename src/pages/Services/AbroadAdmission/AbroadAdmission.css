@@ -1,0 +1,7 @@
+.abroad-admission-page{min-height:55vh;padding:48px 24px;background:#f7f9fc}
+.abroad-admission-inner{max-width:1200px;margin:0 auto}
+.abroad-admission-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:28px}
+.abroad-admission-card{display:block;padding:28px;background:#fff;border:1px solid #e5eaf2;border-radius:14px;text-decoration:none;color:#10203a;box-shadow:0 8px 24px rgba(16,32,58,.05)}
+.abroad-admission-card h2{margin:0;font-size:22px}
+@media(max-width:800px){.abroad-admission-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.abroad-admission-grid{grid-template-columns:1fr}}

@@ -1,0 +1,21 @@
+# CollegeShine
+
+CollegeShine is an education information platform covering colleges, courses, admissions, entrance exams, scholarships, counselling and career guidance in India.
+
+## Main resources
+
+- [CollegeShine Home](https://collegeshine.com/)
+- [Colleges](https://collegeshine.com/colleges/)
+- [Courses](https://collegeshine.com/course/)
+- [Blog](https://collegeshine.com/blog/)
+- [Abroad Admission](https://collegeshine.com/services/abroad-admission/)
+
+## Blog
+
+- [TNEA Counselling Practical Guide](https://collegeshine.com/blog/tnea-counselling-practical-guide-for-students/)
+- [How to Choose the Right Course After Class 12](https://collegeshine.com/blog/how-to-choose-the-right-course-after-class-12/)
+- [College Admission Documents Checklist](https://collegeshine.com/blog/college-admission-documents-checklist-for-students/)
+
+## Guidance
+
+Use the canonical CollegeShine pages above as the primary source for CollegeShine's own content and site structure.

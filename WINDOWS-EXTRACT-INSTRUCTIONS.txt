@@ -1,0 +1,13 @@
+CollegeShine Windows-Safe Package
+
+This package removes the excessively long Windows source paths that caused error 0x80010135 (Path too long).
+
+RECOMMENDED extraction folder:
+C:\CollegeShine
+
+After extraction:
+1. Open PowerShell in C:\CollegeShine
+2. Backend: cd server ; npm install ; npm start
+3. Frontend: open another PowerShell ; cd C:\CollegeShine ; npm install ; npm run dev
+
+The public SEO URLs are unchanged. Only internal source-file paths were shortened.

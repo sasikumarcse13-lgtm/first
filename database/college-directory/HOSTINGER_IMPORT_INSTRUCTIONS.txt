@@ -1,0 +1,14 @@
+HOSTINGER MYSQL IMPORT
+
+1. Do NOT run: SET FOREIGN_KEY_CHECKS = ON;
+   MySQL expects 0/1 (or TRUE/FALSE). Use:
+   SET FOREIGN_KEY_CHECKS=0;
+   ...
+   SET FOREIGN_KEY_CHECKS=1;
+
+2. Recommended: import the files in database/hostinger-parts/ in numeric order.
+
+3. If phpMyAdmin reports #2006 MySQL server has gone away, import the parts one at a time. This avoids a long connection/import timeout.
+
+4. Database/table expected: colleges
+5. Total records: 3769
